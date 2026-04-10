@@ -15,10 +15,10 @@ void addrecord(){
     printf("Enter Data Used (GB): ");
     scanf("%f", &r.dataUsed);
     printf("Enter the month and year: ");
-    scanf("%d%d",&r.m.month,&r.m.year);
+    scanf("%d%d\n",&r.m.month,&r.m.year);
     fprintf(p, "%s %d %.2f %d %d\n", r.location, r.users, r.dataUsed,r.m.month,r.m.year);
     fclose(p);
-    printf("Record Added!\n");
+    printf("----- Record Added! -----\n");
 };
 void displayrecord() {
     struct WifiUsage r;
@@ -42,10 +42,12 @@ void displayrecord() {
                  &r.m.year) != EOF) {
 
         if(r.m.month==m && r.m.year==y) {
+            printf("---------------------------------");
             printf("\nLocation: %s", r.location);
             printf("\nUsers: %d", r.users);
             printf("\nData Used: %.2f GB\n", r.dataUsed);
             found = 1;
+            printf("--------------------------------\n");
         }
     }
     if(!found) {

@@ -6,7 +6,8 @@ void analyzeusage(){
         printf("File does not exist");
         return;
     }
-    int max=0,min,i=0,mi=0,ma=0;
+    float max=0,min;
+    int i=0,mi=0,ma=0;
     if(fscanf(p,"%s %d %f %d %d",
                  r.location,
                  &r.users,
@@ -54,5 +55,6 @@ void analyzeusage(){
                         printf("Dataused: %.2f\n",r.dataUsed);
                         printf("Month and year:%d/%d\n",r.m.month,r.m.year);
                     }
+                    i++;
                  }
 }

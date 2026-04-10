@@ -10,7 +10,6 @@ struct WifiUsage {
 };
 #include<stdio.h>
 #include<string.h>
-#include<limits.h>
 #include"auth.c"
 #include"records.c"
 #include "analysis.c"
@@ -20,9 +19,9 @@ int main() {
         printf("Access Denied!\n");
         return 0;
     }
-    printf("Menu");
     do {
-        printf("\n--- GEU Wi-Fi Monitoring System ---\n");
+        printf("\n----- GEU Wi-Fi Monitoring System -----\n\n");
+        printf("---MENU---\n");
         printf("1. Add Record\n");
         printf("2. Display Records\n");
         printf("3. Analyze Usage\n");

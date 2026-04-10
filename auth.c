@@ -11,10 +11,11 @@ int loginuser(){
     fgets(username,50,stdin);
     printf("Enter the password:");
     fgets(password,50,stdin);
+    printf("\n");
     username[strlen(username)-1]='\0';
     password[strlen(password)-1]='\0';
     p=fopen("user.txt","r");  
-    if(p == '\0') {             
+    if(p ==NULL) {             
         printf("Error opening file!\n");
         return 0;
     }
@@ -26,7 +27,7 @@ int loginuser(){
     }
     fclose(p);  
     if(c==1){
-        printf("Login successfull");
+        printf("Login successfull ! Welcome\n");
         return 1;
     }
     else{
