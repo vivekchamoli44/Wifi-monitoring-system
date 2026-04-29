@@ -13,6 +13,7 @@ struct WifiUsage {
 #include"auth.c"
 #include"records.c"
 #include "analysis.c"
+#include "sort.c"
 int main() {
     int count = 0, choice;
     if(!loginuser()) {
@@ -26,7 +27,8 @@ int main() {
         printf("2. Display Records\n");
         printf("3. Analyze Usage\n");
         printf("4. Search By Location\n");
-        printf("5. Exit\n");
+        printf("5. Display Sorted List\n");
+        printf("6. Exit\n");
         printf("Enter choice: ");
         scanf("%d", &choice);
 
@@ -45,13 +47,16 @@ int main() {
                 searchbylocation();
                 break;
             case 5:
+                sort();
+                break;
+            case 6:
                 printf("Data Saved. Exiting...\n");
                 break;
             default:
                 printf("Invalid choice!\n");
         }
 
-    } while(choice != 5);
+    } while(choice != 6);
 
     return 0;
 }

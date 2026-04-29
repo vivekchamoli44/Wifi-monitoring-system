@@ -15,7 +15,7 @@ void addrecord(){
     printf("Enter Data Used (GB): ");
     scanf("%f", &r.dataUsed);
     printf("Enter the month and year: ");
-    scanf("%d%d\n",&r.m.month,&r.m.year);
+    scanf("%d%d",&r.m.month,&r.m.year);
     fprintf(p, "%s %d %.2f %d %d\n", r.location, r.users, r.dataUsed,r.m.month,r.m.year);
     fclose(p);
     printf("----- Record Added! -----\n");
